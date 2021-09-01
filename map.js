@@ -16,15 +16,7 @@ var polygon = L.polygon([
     [48.51, -122.57]
 ]).addTo(mymap);
 
-var myStyle = {
-    "color": "#ff7800",
-    "weight": 5,
-    "opacity": 0.65
-};
-
-L.geoJSON(boatpoints.geojson, {
-    style: myStyle
-}).addTo(map);
+L.geoJSON(boatpoints.geojson).addTo(map);
 
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
