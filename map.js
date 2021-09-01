@@ -23,8 +23,8 @@ L.geoJSON(boatpoints.geojson).addTo(mymap);
       maxZoom: 18
 }).addTo(mymap);*/
 
-mapLink = '<a href="http://www.esri.com/">Esri</a>';
-wholink = 'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+var mapLink = '<a href="http://www.esri.com/">Esri</a>';
+var wholink = 'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
 L.tileLayer(
             'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
