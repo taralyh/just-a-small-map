@@ -22,7 +22,7 @@ var myStyle = {
     "opacity": 0.65
 };
 
-L.geoJSON(boatpoints.geoson, {
+L.geoJSON(boatpoints.geojson, {
     style: myStyle
 }).addTo(map);
 
