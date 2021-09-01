@@ -36,7 +36,7 @@ var points_lyr = new L.geoJson();
 points_lyr.addTo(mymap);
 
 $.ajax({
-dataType: "json",
+dataType: "geojson",
 url: "boatpoints.geojson",
 success: function(data) {
     $(data.features).each(function(key, data) {
