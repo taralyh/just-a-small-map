@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Simple Leaflet Map</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.css" />
-</head>
-<body>
-    <div id="map" style="width: 600px; height: 400px"></div>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
 
-    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.js">
-    </script>
+<link rel="stylesheet" href="style.css">
 
-    <script>
-        var map = L.map('map').setView([-41.2858, 174.78682], 14);
-        mapLink = 
-            '<a href="http://www.esri.com/">Esri</a>';
-        wholink = 
-            'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
-        L.tileLayer(
-            'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '&copy; '+mapLink+', '+wholink,
-            maxZoom: 18,
-            }).addTo(map);
-  
-    </script>
-</body>
-</html>
+<center><div style="font-size:20px;font-family:Georgia;font-weight:bold;">Just a small map</div></center>
+
+ <div id="mapid"></div>
+
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+ <script type="text/javascript" src="map.js"></script>
