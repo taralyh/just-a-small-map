@@ -20,3 +20,12 @@ L.tileLayer.provider('Stamen.Watercolor').addTo(mymap);
 
 var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");
 geojsonLayer.addto(mymap);
+
+$.ajax({
+ url:'boatpoints.geojson',
+ dataType: "json",
+ success: console.log("Data successfully loaded!"),
+ error: function (xhr) {
+    alert(xhr.statusText)
+ }
+})
