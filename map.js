@@ -29,10 +29,18 @@ L.tileLayer(
             maxZoom: 18,
             }).addTo(mymap);
 
+// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+$.getJSON("boatpoints.geojson",function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data).addTo(mymap);
+});
+
+// mymap.fitBounds(datalayer.getBounds());
+
 /*var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");       
 geojsonLayer.addTo(mymap);*/
 
-var points_lyr = new L.geoJson();
+/*var points_lyr = new L.geoJson();
 points_lyr.addTo(mymap);
 
 $.ajax({
@@ -43,7 +51,7 @@ success: function(data) {
         points_lyr.addData(data);
     });
 }
-}).error(function() {});
+}).error(function() {});*/
 
 /*L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/2/0/1?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
