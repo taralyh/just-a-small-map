@@ -16,10 +16,6 @@ var polygon = L.polygon([
     [48.51, -122.57]
 ]).addTo(mymap);
 
-var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");       
-geojsonLayer.addTo(mymap);
-
-
 /*L.tileLayer.provider(Esri.WorldImagery, {
       maxZoom: 18
 }).addTo(mymap);*/
@@ -32,6 +28,22 @@ L.tileLayer(
             attribution: '&copy; '+mapLink+', '+wholink,
             maxZoom: 18,
             }).addTo(mymap);
+
+/*var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");       
+geojsonLayer.addTo(mymap);*/
+
+var points_lyr = new L.geoJson();
+points_lyr.addTo(mymap);
+
+$.ajax({
+dataType: "json",
+url: "boatpoints.geojson",
+success: function(data) {
+    $(data.features).each(function(key, data) {
+        points_lyr.addData(data);
+    });
+}
+}).error(function() {});
 
 /*L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/2/0/1?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
