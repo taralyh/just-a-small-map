@@ -16,7 +16,8 @@ var polygon = L.polygon([
     [48.51, -122.57]
 ]).addTo(mymap);
 
-L.geoJSON(boatpoints.geojson).addTo(mymap);
+var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");       
+geojsonLayer.addTo(map);
 
 
 /*L.tileLayer.provider(Esri.WorldImagery, {
