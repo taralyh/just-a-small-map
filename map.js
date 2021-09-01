@@ -29,11 +29,13 @@ L.tileLayer(
             maxZoom: 18,
             }).addTo(mymap);
 
-// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+L.geoJSON(boats).addTo(map)
+
+/*// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
 $.getJSON("boatpoints.geojson",function(data){
 // L.geoJson function is used to parse geojson file and load on to map
 L.geoJson(data).addTo(mymap);
-});
+});*/
 
 // mymap.fitBounds(datalayer.getBounds());
 
