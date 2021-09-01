@@ -18,5 +18,5 @@ var polygon = L.polygon([
 
 L.tileLayer.provider('Stamen.Watercolor').addTo(mymap);
 
-var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.json");
+var geojsonLayer = new L.GeoJSON.AJAX("boatpoints.geojson");
 geojsonLayer.addto(mymap);
