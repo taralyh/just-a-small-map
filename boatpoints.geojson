@@ -1,6 +1,5 @@
 {
 "type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Latitude": 49.53372, "Longitude": -123.966968, "DateTime": "2021-08-15T21:24:21", "Message": "Checking out Secret Cove tonight.", "Boat Status": "Anchored" }, "geometry": { "type": "Point", "coordinates": [ -123.966968, 49.53372 ] } },
 { "type": "Feature", "properties": { "Latitude": 49.496588, "Longitude": -124.230184, "DateTime": "2021-08-15T19:09:15", "Message": null, "Boat Status": "Underway" }, "geometry": { "type": "Point", "coordinates": [ -124.230184, 49.496588 ] } },
